@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: #DFDFDF;
+  margin: 0;
+}
+
+.logs {
+  width: 800px;
+  background: #EAE2B7;
+  /* background: #bfa; */
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.item{
+  display: flex;
+  background: #FCBF49;
+  box-shadow: 0 0 10px rgba(0, 0, 0,2);
+  border-radius: 10px;
+  margin: 16px 0;
+}
