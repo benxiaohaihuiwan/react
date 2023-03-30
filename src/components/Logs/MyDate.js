@@ -1,13 +1,13 @@
 import './MyDate.css'
 
-const MyDate = ()=>{
+const MyDate = (props)=>{
   return(
     <div className="date">
       <div className="month">
-        四 月
+        {props.month}
       </div>
       <div className="day">
-        19
+        {props.day}
       </div>
     </div>
   )

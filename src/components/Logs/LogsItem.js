@@ -1,9 +1,9 @@
 import './LogsItem.css'
-const LogsItem = ()=>{
+const LogsItem = (props)=>{
   return (
       <div className="content">
-        <h2 className="desc">学习 react</h2>
-        <div className="time">40分钟</div>
+        <h2 className="desc">{props.desc}</h2>
+        <div className="time">{props.time}</div>
       </div>
   )
 }

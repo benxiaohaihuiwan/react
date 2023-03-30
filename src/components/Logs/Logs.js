@@ -5,8 +5,8 @@ const Logs = ()=>{
   return (
     <div className="logs">
       <div className="item">
-        <MyDate />
-        <LogsItem />
+        <MyDate month='五月' day="21"/>
+        <LogsItem desc="最好的语言 react" time="70分钟" />
       </div>
     </div>
   )
