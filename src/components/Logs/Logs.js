@@ -9,7 +9,10 @@ const Logs = (props)=>{
   //     return <LogsItem itemData={item} key={item.id} deleteHandler={()=>props.deleteHandler(item.id)} />
   //   })
   // }
-  const LogsInfo = props.logsData.map(item=><LogsItem itemData={item} key={item.id} deleteHandler={()=>props.deleteHandler(item.id)} />)
+  const middlewareDelete = (id)=>{
+    props.deleteHandler(id)
+  }
+  const LogsInfo = props.logsData.map(item=><LogsItem itemData={item} key={item.id} deleteHandler={()=>middlewareDelete(item.id)} />)
 
   const emptyHandlerInfo = LogsInfo.length ? LogsInfo : <p>已经没有数据可加载了</p>
     
