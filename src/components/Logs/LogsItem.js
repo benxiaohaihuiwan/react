@@ -8,6 +8,7 @@ import BackDrop from '../BackDrop/BackDrop'
 import ConfirmModal from '../ConfirmModal/ConfirmModal'
 import { useState } from 'react'
 
+
 const LogsItem = (props)=>{
   const deleteHandler = ()=>{
     setShowModal(true)
@@ -20,6 +21,7 @@ const LogsItem = (props)=>{
   const onCancel = ()=>{
     setShowModal(false)
   }
+
   return (
     <Card className="item">
       {
