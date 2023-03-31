@@ -10,10 +10,14 @@ const Logs = (props)=>{
   //   })
   // }
   const LogsInfo = props.logsData.map(item=><LogsItem itemData={item} key={item.id} deleteHandler={()=>props.deleteHandler(item.id)} />)
+
+  const emptyHandlerInfo = LogsInfo.length ? LogsInfo : <p>已经没有数据可加载了</p>
+    
+  
   return (
     <Card className="logs">
        {
-         LogsInfo
+         emptyHandlerInfo
        }
     </Card>
   )
