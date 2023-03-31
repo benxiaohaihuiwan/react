@@ -1,19 +1,21 @@
 import './LogsItem.css'
 import MyDate from "./MyDate"
+
+import Card from '../Card/Card'
+
 const LogsItem = (props)=>{
-  const deleteHandler = (props)=>{
-    console.log('props:',props)
-    props.deleteItemHandler()
+  const deleteHandler = ()=>{
+    props.deleteHandler()
   }
   return (
-    <div className="item">
-        <MyDate month={props.logsItemData.month} day={props.logsItemData.day} />
+    <Card className="item">
+        <MyDate month={props.itemData.month} day={props.itemData.day} />
         <div className="content">
-          <h2 className="desc">{props.logsItemData.desc}</h2>
-          <div className="time">{props.logsItemData.time}</div>
+          <h2 className="desc">{props.itemData.desc}</h2>
+          <div className="time">{props.itemData.time}</div>
         </div>
         <button onClick={deleteHandler}>删除</button>
-    </div>
+    </Card>
   )
 }
 

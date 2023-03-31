@@ -3,9 +3,8 @@ import Logs from "./components/Logs/Logs"
 
 import UseRefTest from "./components/useRefTest"
 
-import Card from "./components/Card/Card"
-
 import FormTest from "./components/FormTest/FormTest"
+
 
 const App = ()=>{
   const [logsData,setLogsData] = useState([
@@ -35,19 +34,12 @@ const App = ()=>{
     setLogsData([...logsData,data])
   }
   const deleteHandler = (id)=>{
-    console.log('删除的id：',id)
-    const newLogsData = [...logsData]
-    const arr = newLogsData.filter(item=>{
-      return item.id !== id
-    })
-    setLogsData(arr)
+    setLogsData(logsData.filter(item=>item.id !==id))
   }
   return (
     <div>
       <FormTest onSaveForm={onSaveForm} />
-      <Card>
-        <Logs logsData={logsData} deleteHandler={deleteHandler} />
-      </Card>
+      <Logs logsData={logsData} deleteHandler={deleteHandler} />
       <UseRefTest />
    </div>
   )
