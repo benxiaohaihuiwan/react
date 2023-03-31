@@ -1,7 +1,10 @@
+import Meals from "./components/Meals/Meals"
 
 const App = ()=>{
   return (
-    <div>this is a App</div>
+    <div>
+      <Meals />
+    </div>
   )
 }
 
